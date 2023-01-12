@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { ModelsComponent } from './models/models.component';
 import { ItemsComponent } from './items/items.component';
 import { CreateItemComponent } from './create-item/create-item.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,11 +17,13 @@ import { CreateItemComponent } from './create-item/create-item.component';
     HomeComponent,
     ModelsComponent,
     ItemsComponent,
-    CreateItemComponent
+    CreateItemComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule  ],
+    AppRoutingModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
