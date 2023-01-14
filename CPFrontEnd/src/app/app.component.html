@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
      
-      <a class="navbar-brand branding" routerLink="/home" ><i class="fa fa-bars"></i>
+      <a class="navbar-brand branding"  (click)="showMenu()" ><i class="fa fa-bars"></i>
         Customer Portal  </a>
     </div>
 
@@ -13,24 +13,20 @@
     </ol>
     <ol class="nav navbar-nav">
       <li ><a routerLink="/createItem"><i class="fas fa-chart-line"> createItem</i> </a></li>
-    </ol>
-    <ol class="nav navbar-nav">
-      <li ><a routerLink="/models"><i class="fas fa-chart-line"> models</i> </a></li>
     </ol> 
-    
+   
    
        
         <ol class="nav navbar-nav navbar-right">
           <li><a> <i class="fas fa-user-circle"> Profile</i></a></li>
         </ol>
+       
   </div>
 </nav>
 
 
-
-
 <div id="wrapper" class="wrapper-content">
-  <div id="sidebar-wrapper">
+  <div id="sidebar-wrapper"[hidden]="menu" >
       <ul class="sidebar-nav">
         <!--   <li class="sidebar-brand">
               <a href="#">
@@ -44,21 +40,17 @@
           <li>
               <a href="#">invoice</a>
           </li>
+        
           <li>
-              <a href="#">Overview</a>
+              <a routerLink="/items">items</a>
           </li>
-          <li>
-              <a href="#">items</a>
-          </li>
-          <li class="#">
-              <a href="#">About</a>
+          <li >
+              <a routerLink="/createItem">Add Item</a>
           </li>
           <li>
-              <a href="#">Services</a>
-          </li>
-          <li>
-              <a href="#">Contact</a>
-          </li>
+            <a href="#">Overview</a>
+        </li>
+         
       </ul>
   </div>
 
@@ -67,7 +59,7 @@
       <div class="container-fluid">
           <div class="row">
               <div class="col-lg-12">
-<router-outlet></router-outlet>
+                    <router-outlet></router-outlet>
 
                  
               </div>

@@ -195,7 +195,11 @@ button{
     margin: 0;
     justify-content: flex-start;
 }
+.navbar-brand {
+    color:rgb(246, 251, 251);
 
+
+}
 
 
 
