@@ -32,7 +32,7 @@
         <div class="card product_item">
             <div class="body">
                 <div class="cp_img">
-                    <img src='https://picsum.photos/200/300/?blur=2' alt="Product" class="img-fluid">
+                    <img src='https://via.placeholder.com/150' alt="Product" class="img-fluid">
                     <div class="hover">
                         <a href="javascript:void(0);" class="btn btn-primary btn-sm waves-effect"><i
                                 class="zmdi zmdi-plus"></i></a>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="product_details">
                     <h5><a href="ec-product-detail.html">{{i.item}} </a></h5>
-                    <p>{{i.item}} </p>
+                    <p>{{i.description | slice:0:10}}... </p>
                 </div>
             </div>
         </div>
