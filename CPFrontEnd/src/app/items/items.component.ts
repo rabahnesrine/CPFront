@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemsService } from '../services/items.service';
 
 @Component({
   selector: 'app-items',
@@ -7,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemsComponent implements OnInit {
 
-  list=[{item:"roue",description:"velo",img:"/assets/roue1.png" },{item:"roue2",description:"voiture",img:"/assets/roue2.png" },{item:"roue",description:"velo",img:"/assets/roue1.png" },{item:"roue2",description:"voiture",img:"/assets/roue2.png" },{item:"roue3",description:"voiture",img:"/assets/roue3.png" },{item:"roue4",description:"voiture",img:"/assets/roue4.png" }]
-  constructor() { }
+  listItems:any=[]
+  constructor(private itemService : ItemsService) { }
 
   ngOnInit(): void { 
-    console.log(this.list)
+    this.get_Items()
   }
+  public get_Items(){
 
+    this.itemService.getItems().subscribe(res=>{
+      this.listItems = res
+      console.log(this.listItems);
+      
+    })
+    }
 }

@@ -28,11 +28,11 @@
 
     </div>
     <div class="row" style="margin-top:30px;">
-    <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let i of list">
+    <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let i of listItems">
         <div class="card product_item">
             <div class="body">
                 <div class="cp_img">
-                    <img src={{i.img}} alt="Product" class="img-fluid">
+                    <img src='https://picsum.photos/200/300/?blur=2' alt="Product" class="img-fluid">
                     <div class="hover">
                         <a href="javascript:void(0);" class="btn btn-primary btn-sm waves-effect"><i
                                 class="zmdi zmdi-plus"></i></a>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="product_details">
                     <h5><a href="ec-product-detail.html">{{i.item}} </a></h5>
-                    <p>{{i.description}} </p>
+                    <p>{{i.item}} </p>
                 </div>
             </div>
         </div>
